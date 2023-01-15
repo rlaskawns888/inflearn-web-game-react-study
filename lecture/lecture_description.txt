@@ -1,0 +1,53 @@
+- WebPack 설치
+- lecture 폴더를 생성하고 그 안에 react create app 을 세팅.
+
+- create React app 을 바로 사용할 경우, webpack을 이해하지 못하고 하는것과 같다.
+
+
+
+[강좌 위치]
+1. inflearn.com/course/web-game-react/unit/21568
+2. https://www.inflearn.com/course/web-game-react/unit/21569
+
+[강좌 내용]
+1. lecture 폴더 생성
+2. 해당 폴더안 진입
+
+    npm init
+    - 패키지명은 자유
+
+3. npm i react
+4. npm i react-dom
+5. npm i -D webpack-cli
+-> Dev용으로 사용하기 위한 명령어: -D
+
+6. 위의 차례대로 진행할경우, package.json 아래와같이 생성됨
+    
+{
+    "name": "lecture",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "webpack-cli": "^5.0.1"
+    }
+}
+
+7. webpack.config.js 생성
+    - 해당 파일 안에는 웹팩에 필요한 속성값들을 넣어줄 예정.
+
+
+8. client.jsx 생성 후, 아래 코드 생성
+    const React = require('react');
+    const ReactDOM = require('react-dom');
+
+9. index.html 생성
