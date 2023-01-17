@@ -9,10 +9,21 @@ module.exports = {
     },
 
     //webpack에서 entry, output이 제일 중요함.
+    //입력받은것을 모듈을 적용하고 출력한다.
     entry: {
         // app: ['./client.jsx'],
-        app: ['./client.jsx'],
+        app: ['./client'],
     },//입력
+    module: {
+        rules: [{
+            test: /\.jsx?/, //js, jsx 파일에 룰을 적용하겟다.
+            loader: 'babel-loader',
+            options: {
+                presets: ['@babel/preset-env','@babel/preset-react'],
+                plugins: ['@babel/plugin-proposal-class-properties']
+            },
+        }],
+    }, 
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'app.js',

@@ -51,3 +51,28 @@
     const ReactDOM = require('react-dom');
 
 9. index.html 생성
+
+10. webpack 명령어가 not found 일 경우.
+ > npx webpack 
+ > package.json > script에  dev 추가.
+
+
+11. webpack에 babel 설치필요
+ > npm i -D @babel/core
+ : 바벨 설치
+
+ > npm i -D @babel/preset-env 
+ : 환경에 맞게 알아서 변경해줌.
+
+npm i -D webpack
+
+npm i -D @babel/preset-react
+
+
+ > npm i -D babel-loader
+: babel 이랑 webpack 연결
+
+"바벨은 실제 빌드에서는 필요없기때문에, -D로 개발에서만 사용하도록 함"
+  
+
+  12. npx wepback 을 커멘드에서하면 dist 폴더 밑 app.js에 생성되어있음.
