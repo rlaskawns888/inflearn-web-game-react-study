@@ -1,0 +1,16 @@
+
+2-9. 웹팩 데브서버와 핫 리로딩 
+
+06:50
+
+1. 설치
+    
+    > npm i react-refresh @pmmmwh/react-refresh-webpack-plugin -D
+
+    > npm i -D webpack-dev-server
+
+2. package.json
+
+    > "dev": "webpack" -> "dev": "webpack serve --env development"
+
+3. webpack.config.js 수정

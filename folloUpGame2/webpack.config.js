@@ -1,5 +1,7 @@
 const path = require('path');
 
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin'); 
+
 module.exports = {
     mode: 'development',
     devtool: 'eval', //hiddien-source-map
@@ -18,13 +20,30 @@ module.exports = {
                     '@babel/preset-env',
                     '@babel/preset-react',
                 ],
-                plugins: [],
+                plugins: [
+                    'react-refresh/babel'
+                ],
             },
         }],
     },
-    plugins: [],
+    plugins: [
+        new ReactRefreshWebpackPlugin()
+    ],
     output: {        
-        filename: 'app.js',
         path: path.join(__dirname, 'dist'),
+        filename: 'app.js',        
+        publicPath: '/dist/',
+    },
+    devServer: {
+        // static: {
+        //     directory: path.join(__dirname, 'dist'),
+        // },
+        // static: {
+        //     directory: path.join(__dirname, "./")
+        // },
+        // compress: true,
+        devMiddleware: { publicPath: '/dist/' },
+        static: { directory: path.resolve(__dirname) },
+        hot: true, 
     }
 };  
