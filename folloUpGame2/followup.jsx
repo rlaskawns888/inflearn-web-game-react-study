@@ -22,7 +22,6 @@ const FollowUp = () => {
             inputRef.current.focus();
         }
     }
-    
     const onChangeInput = (e) => {
         setValue(e.target.value)
     }
